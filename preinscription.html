@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Préinscription — Complexe Scolaire Islamique Madrassa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-deep:#0c5f4f; --green:#12816a;
+    --navy-deep:#123a37;
+    --gold:#ceb286; --gold-light:#e3d2b8;
+    --cream:#faf6ec; --cream-warm:#f3ecdb;
+    --ink:#152026; --ink-soft:#4b5560; --line:#e3dcc9;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Work Sans',sans-serif;color:var(--ink);background:var(--cream);}
+  h1,h2,h3,.eyebrow,.brand{font-family:'Cairo',sans-serif;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px;}
+  .icn{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+
+  header{background:#fff;border-bottom:1px solid var(--line);}
+  .nav{max-width:920px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .brand{font-weight:800;color:var(--navy-deep);}
+  .back-link{display:flex;align-items:center;gap:6px;color:var(--green-deep);font-weight:600;font-size:.9rem;}
+
+  .top{background:var(--navy-deep);color:#fff;padding:44px 0 36px;text-align:center;}
+  .top .eyebrow{color:var(--gold-light);font-weight:700;font-size:.85rem;letter-spacing:.03em;text-transform:uppercase;}
+  .top h1{margin:10px 0 8px;font-size:clamp(1.5rem,3vw,2.1rem);}
+  .top p{color:#cfe3df;max-width:520px;margin:0 auto;}
+
+  .layout{display:grid;grid-template-columns:1.4fr .9fr;gap:28px;padding:40px 0 60px;align-items:start;}
+  @media (max-width:860px){.layout{grid-template-columns:1fr;}}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;}
+  .card h3{margin:0 0 4px;color:var(--navy-deep);font-size:1.1rem;}
+  .step-label{color:var(--green-deep);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;margin-bottom:4px;}
+
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
+  .field label{font-size:.85rem;font-weight:600;color:var(--navy-deep);}
+  .field input, .field select, .field textarea{
+    background:var(--cream-warm);border:1px solid var(--line);border-radius:10px;
+    padding:11px 13px;font-family:'Work Sans',sans-serif;font-size:.95rem;color:var(--ink);
+  }
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:520px){.field-row{grid-template-columns:1fr;}}
+  .radio-group{display:flex;flex-wrap:wrap;gap:10px;}
+  .radio-group label{display:flex;align-items:center;gap:6px;background:var(--cream-warm);border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:.9rem;cursor:pointer;}
+  .radio-group input{accent-color:var(--green-deep);}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:12px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;width:100%;}
+  .btn.green{background:var(--green-deep);color:#fff;}
+  .note{font-size:.8rem;color:var(--ink-soft);text-align:center;margin-top:10px;}
+
+  /* Récapitulatif */
+  .recap{position:sticky;top:20px;}
+  .recap h4{margin:0 0 12px;color:var(--navy-deep);font-size:1rem;display:flex;align-items:center;gap:8px;}
+  .recap-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.88rem;color:var(--ink-soft);}
+  .recap-row b{color:var(--navy-deep);}
+  .recap-row span.amount{color:var(--green-deep);font-weight:700;}
+  .recap-empty{color:var(--ink-soft);font-size:.88rem;font-style:italic;}
+  .wa-mini{display:flex;align-items:center;gap:10px;margin-top:18px;padding:12px 14px;background:var(--cream-warm);border-radius:12px;}
+  .wa-mini img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid var(--green-deep);}
+  .wa-mini .lbl{font-size:.82rem;font-weight:700;color:var(--navy-deep);}
+
+  #confirmMsg{display:none;background:#e8f5f0;border:1px solid var(--green-deep);color:var(--green-deep);padding:14px;border-radius:12px;font-weight:600;text-align:center;margin-bottom:16px;}
+
+  footer{background:var(--navy-deep);color:#cfe3df;padding:24px 0;text-align:center;font-size:.82rem;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">Complexe Scolaire Islamique <span style="color:var(--gold);">Madrassa</span></a>
+    <a href="inscriptions.html" class="back-link"><svg class="icn"><path d="M15 5 8 12l7 7"/></svg> Retour aux inscriptions</a>
+  </div>
+</header>
+
+<div class="top">
+  <div class="wrap">
+    <span class="eyebrow">✍🏾 Préinscription en ligne</span>
+    <h1>Préinscrire mon enfant</h1>
+    <p>Remplissez ce formulaire simple. Notre administration vous contactera pour finaliser l'inscription.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="layout">
+
+    <div class="card">
+      <div id="confirmMsg">✓ Votre demande a bien été envoyée. Notre administration vous contactera très prochainement.</div>
+
+      <form id="preinsForm" action="https://api.web3forms.com/submit" method="POST">
+        <!-- Remplacez la valeur ci-dessous par la clé d'accès reçue sur web3forms.com -->
+        <input type="hidden" name="access_key" value="VOTRE_CLE_WEB3FORMS_ICI">
+        <input type="hidden" name="subject" value="Nouvelle préinscription — CSI Madrassa">
+        <input type="hidden" name="from_name" value="Formulaire de préinscription — Site Madrassa">
+        <!-- Redirection après envoi (désactive la redirection Web3Forms par défaut) -->
+        <input type="hidden" name="redirect" value="false">
+
+        <div class="step-label">Étape 1</div>
+        <h3>Informations sur l'enfant</h3>
+        <div class="field">
+          <label for="childName">Nom et prénom de l'enfant</label>
+          <input type="text" id="childName" name="Nom de l'enfant" placeholder="Ex : Fatou Diop" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="childBirth">Date de naissance</label>
+            <input type="date" id="childBirth" name="Date de naissance" required>
+          </div>
+          <div class="field">
+            <label for="childLevel">Niveau souhaité</label>
+            <select id="childLevel" name="Niveau souhaité" required>
+              <option value="" disabled selected>Choisir...</option>
+              <option>Crèche</option>
+              <option>Maternelle</option>
+              <option>Élémentaire / Primaire</option>
+              <option>Cours de Coran uniquement</option>
+              <option>Maison d'Éducation Islamique (Coran / Fiqh / Sîra)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:22px;">
+          <div class="step-label">Étape 2</div>
+          <h3 style="margin-bottom:10px;">Programme et formule</h3>
+          <label>Programme choisi</label>
+          <div class="radio-group">
+            <label><input type="radio" name="Programme" value="Madrassa Academy" required> Madrassa Academy</label>
+            <label><input type="radio" name="Programme" value="Maison d'Éducation Islamique"> Maison d'Éducation Islamique</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Formule (si Maison d'Éducation)</label>
+          <div class="radio-group">
+            <label><input type="radio" name="Formule" value="Internat"> Internat</label>
+            <label><input type="radio" name="Formule" value="Demi-pension"> Demi-pension</label>
+            <label><input type="radio" name="Formule" value="Externat"> Externat</label>
+            <label><input type="radio" name="Formule" value="Non applicable" checked> Non applicable</label>
+          </div>
+        </div>
+
+        <div style="margin-top:22px;">
+          <div class="step-label">Étape 3</div>
+          <h3 style="margin-bottom:10px;">Informations du parent / tuteur</h3>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="parentName">Nom et prénom</label>
+            <input type="text" id="parentName" name="Nom du parent" placeholder="Votre nom complet" required>
+          </div>
+          <div class="field">
+            <label for="parentPhone">Téléphone</label>
+            <input type="tel" id="parentPhone" name="Téléphone" placeholder="77 000 00 00" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="parentEmail">Email (facultatif)</label>
+          <input type="email" id="parentEmail" name="Email" placeholder="exemple@email.com">
+        </div>
+        <div class="field">
+          <label for="message">Message ou précision (facultatif)</label>
+          <textarea id="message" name="Message" rows="3" placeholder="Une information complémentaire à nous transmettre ?"></textarea>
+        </div>
+
+        <button type="submit" class="btn green">Envoyer ma préinscription</button>
+        <p class="note">Vos informations sont envoyées directement à l'administration de l'école par email.</p>
+      </form>
+    </div>
+
+    <div class="card recap">
+      <h4>📋 Récapitulatif des frais</h4>
+      <div id="recapContent">
+        <p class="recap-empty">Choisissez un programme pour voir les frais correspondants.</p>
+      </div>
+
+      <div class="wa-mini">
+        <img src="assets/fondatrice.jpg" alt="Maman Zahra">
+        <div>
+          <div class="lbl">Une question avant d'envoyer ?</div>
+          <a href="https://wa.me/221775570581?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20la%20pr%C3%A9inscription." target="_blank" rel="noopener" style="color:var(--green-deep);font-size:.85rem;font-weight:700;">Écrire sur WhatsApp →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">Complexe Scolaire Islamique MADRASSA — Cité Carossole, à côté de Sn City, Sangalkam</div>
+</footer>
+
+<script>
+const TARIFS = {
+  "Crèche": [["Inscription","70 000 F"],["Mensualité","30 000 F"]],
+  "Maternelle": [["Inscription","75 000 F"],["Mensualité","25 000 F"]],
+  "Élémentaire / Primaire": [["Inscription","75 000 F"],["Mensualité","25 000 F"]],
+  "Cours de Coran uniquement": [["Cours de Coran (mercredi soir / week-end)","8 000 F"]],
+  "Maison d'Éducation Islamique (Coran / Fiqh / Sîra)": [
+    ["Inscription (Internat)","188 000 F"],
+    ["Réinscription (Internat)","138 000 F"],
+    ["Mensualité (sans primaire)","70 000 F"],
+    ["Mensualité (avec primaire)","85 000–90 000 F"]
+  ]
+};
+
+function updateRecap(){
+  const level = document.getElementById('childLevel').value;
+  const content = document.getElementById('recapContent');
+  if(!level || !TARIFS[level]){
+    content.innerHTML = '<p class="recap-empty">Choisissez un programme pour voir les frais correspondants.</p>';
+    return;
+  }
+  let html = '';
+  TARIFS[level].forEach(([label, amount]) => {
+    html += `<div class="recap-row"><span>${label}</span><span class="amount">${amount}</span></div>`;
+  });
+  html += '<div class="recap-row" style="border-bottom:none;"><span>Cantine (optionnel)</span><span>12 000 F</span></div>';
+  html += '<div class="recap-row" style="border-bottom:none;"><span>Transport Zone 1 / 2 (optionnel)</span><span>15 000–20 000 F</span></div>';
+  content.innerHTML = html;
+}
+document.getElementById('childLevel').addEventListener('change', updateRecap);
+
+document.getElementById('preinsForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  try{
+    const res = await fetch(form.action, { method: 'POST', body: data, headers: {'Accept':'application/json'} });
+    const json = await res.json();
+    if(json.success){
+      document.getElementById('confirmMsg').style.display = 'block';
+      form.reset();
+      updateRecap();
+      window.scrollTo({top:0, behavior:'smooth'});
+    } else {
+      alert("Une erreur est survenue. Merci de réessayer ou de nous contacter directement sur WhatsApp.");
+    }
+  } catch(err){
+    alert("Une erreur est survenue. Merci de réessayer ou de nous contacter directement sur WhatsApp.");
+  }
+});
+</script>
+
+</body>
+</html>
