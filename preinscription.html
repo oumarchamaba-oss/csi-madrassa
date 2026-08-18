@@ -5,246 +5,114 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Préinscription — Complexe Scolaire Islamique Madrassa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --green-deep:#0c5f4f; --green:#12816a;
-    --navy-deep:#123a37;
-    --gold:#ceb286; --gold-light:#e3d2b8;
-    --cream:#faf6ec; --cream-warm:#f3ecdb;
-    --ink:#152026; --ink-soft:#4b5560; --line:#e3dcc9;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;font-family:'Work Sans',sans-serif;color:var(--ink);background:var(--cream);}
-  h1,h2,h3,.eyebrow,.brand{font-family:'Cairo',sans-serif;}
-  a{text-decoration:none;color:inherit;}
-  .wrap{max-width:920px;margin:0 auto;padding:0 24px;}
-  .icn{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+:root{--green-deep:#0c5f4f;--green:#12816a;--green-bright:#1ea082;--navy-deep:#123a37;--gold:#ceb286;--gold-light:#e3d2b8;--cream:#faf6ec;--cream-warm:#f3ecdb;--ink:#152026;--ink-soft:#4b5560;--line:#e3dcc9}
+*{box-sizing:border-box}body{margin:0;font-family:'Work Sans',sans-serif;color:var(--ink);background:var(--cream)}h1,h2,h3,.eyebrow,.brand-text{font-family:'Cairo',sans-serif}a{text-decoration:none;color:inherit}.wrap{max-width:1100px;margin:0 auto;padding:0 24px}.icn{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+header{position:sticky;top:0;background:rgba(250,246,236,.97);border-bottom:1px solid var(--line);z-index:50;backdrop-filter:blur(10px)}.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1320px;margin:0 auto;gap:16px}.brand{display:flex;align-items:center;gap:12px;flex:none}.brand img{width:44px;height:44px;object-fit:contain}.brand-text{font-weight:700;color:var(--navy-deep);line-height:1.1;font-size:.98rem;white-space:nowrap}.brand-text span{display:block;font-size:.62rem;font-weight:500;color:var(--green-deep);letter-spacing:.06em;text-transform:uppercase}nav.links{display:flex;gap:17px;align-items:center;flex:1;justify-content:center}nav.links a{font-size:.8rem;font-weight:500;color:var(--ink);padding:6px 1px;border-bottom:2px solid transparent;white-space:nowrap}nav.links a:hover{border-color:var(--gold)}.btn{font-family:'Cairo',sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green-deep);color:#fff;padding:11px 22px;border-radius:30px;font-weight:600;font-size:.86rem;border:1px solid var(--green-deep);white-space:nowrap;transition:.15s}.btn:hover{background:var(--green-bright);transform:translateY(-1px)}.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--navy-deep)}.navcta{display:inline-flex}.burger{display:none;background:none;border:0;cursor:pointer;color:var(--navy-deep);padding:6px}@media(max-width:1140px){nav.links{display:none}.burger{display:block}}nav.links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--cream);padding:18px 24px 24px;border-bottom:1px solid var(--line);gap:16px}
 
-  header{background:#fff;border-bottom:1px solid var(--line);}
-  .nav{max-width:920px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-  .brand{font-weight:800;color:var(--navy-deep);}
-  .back-link{display:flex;align-items:center;gap:6px;color:var(--green-deep);font-weight:600;font-size:.9rem;}
+.hero{position:relative;background:radial-gradient(1200px 700px at 15% -10%,#163a72 0%,var(--navy-deep) 55%,#0a1636 100%);color:#fff;padding:64px 0 0;overflow:hidden}.hero-pattern{position:absolute;inset:0;pointer-events:none;opacity:.14;background-image:radial-gradient(circle at 20px 20px,var(--gold) 1.5px,transparent 1.6px);background-size:40px 40px}.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero{padding-top:46px}}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--gold-light);font-weight:700;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase}.hero h1{font-size:clamp(2rem,4.6vw,3.05rem);line-height:1.12;margin:16px 0 18px}.hero h1 em{font-style:normal;color:var(--gold-light)}.hero p{color:#dbe3f4;font-size:1.04rem;line-height:1.65;max-width:56ch;margin:0 0 26px}.hero-art{position:relative}.arch-frame{border:2px solid var(--gold);border-radius:110px 110px 24px 24px;overflow:hidden;background:#fff;box-shadow:0 25px 60px rgba(0,0,0,.28);aspect-ratio:4/5}.arch-frame img{width:100%;height:100%;object-fit:cover;display:block}.hero-strip{border-top:1px solid rgba(255,255,255,.15);padding:20px 0;margin-top:34px}.hero-strip .wrap{display:flex;gap:30px;flex-wrap:wrap;justify-content:space-between}.hero-strip .item{display:flex;align-items:center;gap:10px;color:#cdd8ef;font-size:.85rem}.hero-strip b{color:#fff;font-family:'Cairo',sans-serif}
 
-  .top{background:var(--navy-deep);color:#fff;padding:44px 0 36px;text-align:center;}
-  .top .eyebrow{color:var(--gold-light);font-weight:700;font-size:.85rem;letter-spacing:.03em;text-transform:uppercase;}
-  .top h1{margin:10px 0 8px;font-size:clamp(1.5rem,3vw,2.1rem);}
-  .top p{color:#cfe3df;max-width:520px;margin:0 auto;}
-
-  .layout{display:grid;grid-template-columns:1.4fr .9fr;gap:28px;padding:40px 0 60px;align-items:start;}
-  @media (max-width:860px){.layout{grid-template-columns:1fr;}}
-
-  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;}
-  .card h3{margin:0 0 4px;color:var(--navy-deep);font-size:1.1rem;}
-  .step-label{color:var(--green-deep);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;margin-bottom:4px;}
-
-  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
-  .field label{font-size:.85rem;font-weight:600;color:var(--navy-deep);}
-  .field input, .field select, .field textarea{
-    background:var(--cream-warm);border:1px solid var(--line);border-radius:10px;
-    padding:11px 13px;font-family:'Work Sans',sans-serif;font-size:.95rem;color:var(--ink);
-  }
-  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  @media (max-width:520px){.field-row{grid-template-columns:1fr;}}
-  .radio-group{display:flex;flex-wrap:wrap;gap:10px;}
-  .radio-group label{display:flex;align-items:center;gap:6px;background:var(--cream-warm);border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:.9rem;cursor:pointer;}
-  .radio-group input{accent-color:var(--green-deep);}
-
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:12px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;width:100%;}
-  .btn.green{background:var(--green-deep);color:#fff;}
-  .note{font-size:.8rem;color:var(--ink-soft);text-align:center;margin-top:10px;}
-
-  /* Récapitulatif */
-  .recap{position:sticky;top:20px;}
-  .recap h4{margin:0 0 12px;color:var(--navy-deep);font-size:1rem;display:flex;align-items:center;gap:8px;}
-  .recap-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.88rem;color:var(--ink-soft);}
-  .recap-row b{color:var(--navy-deep);}
-  .recap-row span.amount{color:var(--green-deep);font-weight:700;}
-  .recap-empty{color:var(--ink-soft);font-size:.88rem;font-style:italic;}
-  .wa-mini{display:flex;align-items:center;gap:10px;margin-top:18px;padding:12px 14px;background:var(--cream-warm);border-radius:12px;}
-  .wa-mini img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid var(--green-deep);}
-  .wa-mini .lbl{font-size:.82rem;font-weight:700;color:var(--navy-deep);}
-
-  #confirmMsg{display:none;background:#e8f5f0;border:1px solid var(--green-deep);color:var(--green-deep);padding:14px;border-radius:12px;font-weight:600;text-align:center;margin-bottom:16px;}
-
-  footer{background:var(--navy-deep);color:#cfe3df;padding:24px 0;text-align:center;font-size:.82rem;}
+main{padding:54px 0 70px}.form-layout{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:start}@media(max-width:850px){.form-layout{grid-template-columns:1fr}}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:0 12px 30px rgba(18,58,55,.06)}.section-title{margin:0 0 4px;color:var(--navy-deep);font-size:1.25rem}.section-intro{margin:0 0 24px;color:var(--ink-soft);font-size:.9rem;line-height:1.6}.step{display:flex;align-items:center;gap:10px;margin:26px 0 14px;color:var(--navy-deep);font-family:'Cairo',sans-serif;font-weight:700}.step:first-child{margin-top:0}.step-number{width:30px;height:30px;border-radius:50%;background:var(--cream-warm);color:var(--green-deep);display:flex;align-items:center;justify-content:center;font-size:.85rem}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}.field label{font-size:.84rem;font-weight:600;color:var(--navy-deep)}.field input,.field select,.field textarea{width:100%;background:var(--cream-warm);border:1px solid var(--line);border-radius:10px;padding:12px 13px;font-family:'Work Sans',sans-serif;font-size:.94rem;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green-deep);box-shadow:0 0 0 3px rgba(12,95,79,.08)}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:560px){.field-row{grid-template-columns:1fr}}.check-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:560px){.check-row{grid-template-columns:1fr}}.choice{display:flex;align-items:center;gap:8px;background:var(--cream-warm);border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:.88rem;cursor:pointer}.choice input{accent-color:var(--green-deep)}.submit{width:100%;border:0;cursor:pointer;margin-top:8px}.privacy{font-size:.77rem;color:var(--ink-soft);line-height:1.55;text-align:center;margin:12px 0 0}.side-title{display:flex;align-items:center;gap:9px;color:var(--navy-deep);font-size:1rem;margin:0 0 10px}.side-title .icn{color:var(--green-deep)}.side p{font-size:.86rem;line-height:1.65;color:var(--ink-soft);margin:0 0 18px}.side-link{display:flex;align-items:center;gap:10px;padding:12px 0;border-top:1px dashed var(--line);color:var(--green-deep);font-weight:700;font-size:.86rem}.side-link .icn{width:18px;height:18px}.photo-mini{width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid var(--green-deep);margin-bottom:14px}.callout{background:var(--cream-warm);border-radius:14px;padding:16px;margin-top:20px}.callout strong{display:block;color:var(--navy-deep);margin-bottom:5px;font-family:'Cairo',sans-serif}.callout span{font-size:.8rem;color:var(--ink-soft);line-height:1.5}
+footer{background:var(--navy-deep);color:#cfe3df;padding:30px 0;text-align:center;font-size:.82rem}@media(max-width:600px){.nav{padding:12px 16px}.wrap{padding:0 18px}.brand-text{font-size:.9rem}.brand-text span{font-size:.55rem}.navcta{display:none}}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="nav">
-    <a href="index.html" class="brand">Complexe Scolaire Islamique <span style="color:var(--gold);">Madrassa</span></a>
-    <a href="inscriptions.html" class="back-link"><svg class="icn"><path d="M15 5 8 12l7 7"/></svg> Retour aux inscriptions</a>
-  </div>
+<div class="nav">
+<a href="index.html#top" class="brand"><img src="assets/logo.png" alt="Logo CSI Madrassa"><span class="brand-text">CSI Madrassa<span>Savoir &amp; Foi</span></span></a>
+<nav class="links" id="navLinks">
+<a href="index.html#apropos">A propos</a><a href="index.html#programmes">Programmes</a><a href="index.html#vacances">Vacances</a><a href="index.html#galerie">Galerie</a><a href="index.html#fondatrice">Fondatrice</a><a href="index.html#videos">Vidéos</a><a href="index.html#contact">Contact</a>
+</nav>
+<a href="inscriptions.html" class="btn navcta gold">Inscriptions</a>
+<button class="burger" id="burgerBtn" aria-label="Menu de navigation"><svg class="icn" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div>
 </header>
 
-<div class="top">
-  <div class="wrap">
-    <span class="eyebrow">✍🏾 Préinscription en ligne</span>
-    <h1>Préinscrire mon enfant</h1>
-    <p>Remplissez ce formulaire simple. Notre administration vous contactera pour finaliser l'inscription.</p>
-  </div>
+<section class="hero">
+<div class="hero-pattern"></div>
+<div class="wrap hero-grid">
+<div>
+<span class="eyebrow"><svg class="icn"><use href="#ic-note"/></svg> Préinscription en ligne</span>
+<h1>Préinscrire votre enfant, <em>simplement</em></h1>
+<p>Remplissez le formulaire ci-dessous. Votre demande sera transmise à l'administration, qui vous contactera ensuite pour la suite de la procédure.</p>
+<div><a href="inscriptions.html" class="btn gold">Consulter les informations d'inscription</a></div>
 </div>
+<div class="hero-art"><div class="arch-frame"><img src="assets/hero-inscription.jpg" alt="Élève de Madrassa en classe"></div></div>
+</div>
+<div class="hero-strip"><div class="wrap">
+<div class="item"><svg class="icn"><use href="#ic-file"/></svg><span><b>Formulaire en ligne</b><br>Quelques informations sur l'enfant</span></div>
+<div class="item"><svg class="icn"><use href="#ic-chat"/></svg><span><b>Suivi administratif</b><br>Notre équipe vous recontacte</span></div>
+<div class="item"><svg class="icn"><use href="#ic-shield"/></svg><span><b>Données transmises</b><br>À l'administration de l'école</span></div>
+</div></div>
+</section>
 
+<main>
 <div class="wrap">
-  <div class="layout">
+<div class="form-layout">
+<div class="card">
+<h2 class="section-title">Formulaire de préinscription</h2>
+<p class="section-intro">Merci de renseigner les informations demandées. Les champs marqués comme obligatoires doivent être complétés.</p>
 
-    <div class="card">
-      <div id="confirmMsg">✓ Votre demande a bien été envoyée. Notre administration vous contactera très prochainement.</div>
+<form action="https://formsubmit.co/zawatrading@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Nouvelle préinscription — CSI Madrassa">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://csi-madrassa.com/confirmation.html">
 
-      <form id="preinsForm" action="https://api.web3forms.com/submit" method="POST">
-        <!-- Remplacez la valeur ci-dessous par la clé d'accès reçue sur web3forms.com -->
-        <input type="hidden" name="access_key" value="VOTRE_CLE_WEB3FORMS_ICI">
-        <input type="hidden" name="subject" value="Nouvelle préinscription — CSI Madrassa">
-        <input type="hidden" name="from_name" value="Formulaire de préinscription — Site Madrassa">
-        <!-- Redirection après envoi (désactive la redirection Web3Forms par défaut) -->
-        <input type="hidden" name="redirect" value="false">
-
-        <div class="step-label">Étape 1</div>
-        <h3>Informations sur l'enfant</h3>
-        <div class="field">
-          <label for="childName">Nom et prénom de l'enfant</label>
-          <input type="text" id="childName" name="Nom de l'enfant" placeholder="Ex : Fatou Diop" required>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="childBirth">Date de naissance</label>
-            <input type="date" id="childBirth" name="Date de naissance" required>
-          </div>
-          <div class="field">
-            <label for="childLevel">Niveau souhaité</label>
-            <select id="childLevel" name="Niveau souhaité" required>
-              <option value="" disabled selected>Choisir...</option>
-              <option>Crèche</option>
-              <option>Maternelle</option>
-              <option>Élémentaire / Primaire</option>
-              <option>Cours de Coran uniquement</option>
-              <option>Maison d'Éducation Islamique (Coran / Fiqh / Sîra)</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="field" style="margin-top:22px;">
-          <div class="step-label">Étape 2</div>
-          <h3 style="margin-bottom:10px;">Programme et formule</h3>
-          <label>Programme choisi</label>
-          <div class="radio-group">
-            <label><input type="radio" name="Programme" value="Madrassa Academy" required> Madrassa Academy</label>
-            <label><input type="radio" name="Programme" value="Maison d'Éducation Islamique"> Maison d'Éducation Islamique</label>
-          </div>
-        </div>
-        <div class="field">
-          <label>Formule (si Maison d'Éducation)</label>
-          <div class="radio-group">
-            <label><input type="radio" name="Formule" value="Internat"> Internat</label>
-            <label><input type="radio" name="Formule" value="Demi-pension"> Demi-pension</label>
-            <label><input type="radio" name="Formule" value="Externat"> Externat</label>
-            <label><input type="radio" name="Formule" value="Non applicable" checked> Non applicable</label>
-          </div>
-        </div>
-
-        <div style="margin-top:22px;">
-          <div class="step-label">Étape 3</div>
-          <h3 style="margin-bottom:10px;">Informations du parent / tuteur</h3>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="parentName">Nom et prénom</label>
-            <input type="text" id="parentName" name="Nom du parent" placeholder="Votre nom complet" required>
-          </div>
-          <div class="field">
-            <label for="parentPhone">Téléphone</label>
-            <input type="tel" id="parentPhone" name="Téléphone" placeholder="77 000 00 00" required>
-          </div>
-        </div>
-        <div class="field">
-          <label for="parentEmail">Email (facultatif)</label>
-          <input type="email" id="parentEmail" name="Email" placeholder="exemple@email.com">
-        </div>
-        <div class="field">
-          <label for="message">Message ou précision (facultatif)</label>
-          <textarea id="message" name="Message" rows="3" placeholder="Une information complémentaire à nous transmettre ?"></textarea>
-        </div>
-
-        <button type="submit" class="btn green">Envoyer ma préinscription</button>
-        <p class="note">Vos informations sont envoyées directement à l'administration de l'école par email.</p>
-      </form>
-    </div>
-
-    <div class="card recap">
-      <h4>📋 Récapitulatif des frais</h4>
-      <div id="recapContent">
-        <p class="recap-empty">Choisissez un programme pour voir les frais correspondants.</p>
-      </div>
-
-      <div class="wa-mini">
-        <img src="assets/fondatrice.jpg" alt="Maman Zahra">
-        <div>
-          <div class="lbl">Une question avant d'envoyer ?</div>
-          <a href="https://wa.me/221775570581?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20la%20pr%C3%A9inscription." target="_blank" rel="noopener" style="color:var(--green-deep);font-size:.85rem;font-weight:700;">Écrire sur WhatsApp →</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
+<div class="step"><span class="step-number">1</span>Informations sur l'enfant</div>
+<div class="field"><label for="childName">Nom et prénom de l'enfant *</label><input id="childName" name="Nom et prénom de l'enfant" type="text" required></div>
+<div class="field-row">
+<div class="field"><label for="birth">Date de naissance *</label><input id="birth" name="Date de naissance" type="date" required></div>
+<div class="field"><label for="level">Niveau souhaité *</label><select id="level" name="Niveau souhaité" required><option value="" selected disabled>Choisir un niveau</option><option>Crèche</option><option>Maternelle</option><option>Élémentaire / Primaire</option><option>Cours de Coran uniquement</option><option>Maison d'Éducation Islamique</option></select></div>
 </div>
 
-<footer>
-  <div class="wrap">Complexe Scolaire Islamique MADRASSA — Cité Carossole, à côté de Sn City, Sangalkam</div>
-</footer>
+<div class="step"><span class="step-number">2</span>Parcours et formule</div>
+<div class="field"><label>Parcours souhaité *</label><div class="check-row">
+<label class="choice"><input type="radio" name="Parcours souhaité" value="Madrassa Academy" required> Madrassa Academy</label>
+<label class="choice"><input type="radio" name="Parcours souhaité" value="Maison d'Éducation Islamique"> Maison d'Éducation Islamique</label>
+</div></div>
+<div class="field"><label for="formula">Formule souhaitée</label><select id="formula" name="Formule souhaitée"><option value="" selected>Choisir une formule</option><option>Internat</option><option>Demi-pension</option><option>Externat</option><option>Non applicable</option></select></div>
+
+<div class="step"><span class="step-number">3</span>Parent ou tuteur</div>
+<div class="field-row">
+<div class="field"><label for="parentName">Nom et prénom *</label><input id="parentName" name="Nom du parent ou tuteur" type="text" required></div>
+<div class="field"><label for="phone">Téléphone *</label><input id="phone" name="Téléphone" type="tel" placeholder="77 000 00 00" required></div>
+</div>
+<div class="field"><label for="email">Adresse email</label><input id="email" name="Email" type="email" placeholder="exemple@email.com"></div>
+<div class="field"><label for="message">Message ou précision</label><textarea id="message" name="Message ou précision" rows="4" placeholder="Une information complémentaire à transmettre à l'administration ?"></textarea></div>
+
+<button class="btn submit" type="submit"><svg class="icn"><use href="#ic-send"/></svg>Envoyer la préinscription</button>
+<p class="privacy">En envoyant ce formulaire, les informations saisies sont transmises à l'adresse administrative configurée pour recevoir les demandes de préinscription.</p>
+</form>
+</div>
+
+<aside class="card side">
+<img src="assets/fondatrice.jpg" class="photo-mini" alt="Madame Zahra">
+<h3 class="side-title"><svg class="icn"><use href="#ic-chat"/></svg>Besoin d'aide avant d'envoyer ?</h3>
+<p>L'administration peut vous orienter si vous avez une question sur le parcours, la formule ou la procédure.</p>
+<a class="side-link" href="https://wa.me/221775570581?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20la%20pr%C3%A9inscription%20%C3%A0%20CSI%20Madrassa." target="_blank" rel="noopener"><svg class="icn"><use href="#ic-chat"/></svg>Écrire sur WhatsApp</a>
+<a class="side-link" href="tel:+221775570581"><svg class="icn"><use href="#ic-phone"/></svg>Appeler l'administration</a>
+<div class="callout"><strong>Avant de commencer</strong><span>Consultez la page Inscriptions pour connaître les parcours, les formules, les frais et les pièces à prévoir.</span></div>
+</aside>
+</div>
+</div>
+</main>
+
+<footer><div class="wrap">Complexe Scolaire Islamique MADRASSA — Cité Carossole, à côté de Sn City, Sangalkam</div></footer>
 
 <script>
-const TARIFS = {
-  "Crèche": [["Inscription","70 000 F"],["Mensualité","30 000 F"]],
-  "Maternelle": [["Inscription","75 000 F"],["Mensualité","25 000 F"]],
-  "Élémentaire / Primaire": [["Inscription","75 000 F"],["Mensualité","25 000 F"]],
-  "Cours de Coran uniquement": [["Cours de Coran (mercredi soir / week-end)","8 000 F"]],
-  "Maison d'Éducation Islamique (Coran / Fiqh / Sîra)": [
-    ["Inscription (Internat)","188 000 F"],
-    ["Réinscription (Internat)","138 000 F"],
-    ["Mensualité (sans primaire)","70 000 F"],
-    ["Mensualité (avec primaire)","85 000–90 000 F"]
-  ]
-};
-
-function updateRecap(){
-  const level = document.getElementById('childLevel').value;
-  const content = document.getElementById('recapContent');
-  if(!level || !TARIFS[level]){
-    content.innerHTML = '<p class="recap-empty">Choisissez un programme pour voir les frais correspondants.</p>';
-    return;
-  }
-  let html = '';
-  TARIFS[level].forEach(([label, amount]) => {
-    html += `<div class="recap-row"><span>${label}</span><span class="amount">${amount}</span></div>`;
-  });
-  html += '<div class="recap-row" style="border-bottom:none;"><span>Cantine (optionnel)</span><span>12 000 F</span></div>';
-  html += '<div class="recap-row" style="border-bottom:none;"><span>Transport Zone 1 / 2 (optionnel)</span><span>15 000–20 000 F</span></div>';
-  content.innerHTML = html;
-}
-document.getElementById('childLevel').addEventListener('change', updateRecap);
-
-document.getElementById('preinsForm').addEventListener('submit', async function(e){
-  e.preventDefault();
-  const form = e.target;
-  const data = new FormData(form);
-  try{
-    const res = await fetch(form.action, { method: 'POST', body: data, headers: {'Accept':'application/json'} });
-    const json = await res.json();
-    if(json.success){
-      document.getElementById('confirmMsg').style.display = 'block';
-      form.reset();
-      updateRecap();
-      window.scrollTo({top:0, behavior:'smooth'});
-    } else {
-      alert("Une erreur est survenue. Merci de réessayer ou de nous contacter directement sur WhatsApp.");
-    }
-  } catch(err){
-    alert("Une erreur est survenue. Merci de réessayer ou de nous contacter directement sur WhatsApp.");
-  }
-});
+const burger=document.getElementById('burgerBtn');const links=document.getElementById('navLinks');
+if(burger)burger.addEventListener('click',()=>links.classList.toggle('open'));
+if(links)links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
 </script>
-
+<svg style="display:none">
+<symbol id="ic-note" viewBox="0 0 24 24"><path d="M4 4h13l3 3v13H4Z"/><path d="M14 4v5h5"/><path d="M8 12h8M8 15.5h5"/></symbol>
+<symbol id="ic-file" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6Z"/><path d="M14 3v5h5M9 13h6M9 16h6"/></symbol>
+<symbol id="ic-chat" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 1 3.5 6.6L4 20l1.4-3.6A8 8 0 0 1 4 12Z"/><path d="M8.5 11h7M8.5 14h4.5"/></symbol>
+<symbol id="ic-phone" viewBox="0 0 24 24"><path d="M6 3h4l2 5-2.5 1.5a14 14 0 0 0 5 5L16 12l5 2v4c0 1-1 2-2 2C10 20 4 14 4 5c0-1 1-2 2-2Z"/></symbol>
+<symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.2 8.2-8 10-4.8-1.8-8-5-8-10V6Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></symbol>
+<symbol id="ic-send" viewBox="0 0 24 24"><path d="m3 11 18-8-8 18-2.5-7.5Z"/><path d="M10.5 13.5 21 3"/></symbol>
+</svg>
 </body>
 </html>
