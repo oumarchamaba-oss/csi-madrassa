@@ -91,13 +91,32 @@
   .btn.gold:hover{background:var(--gold-light);}
   .btn.youtube{background:#FF0000;border-color:#FF0000;color:#fff;}
   .btn.youtube:hover{background:#CC0000;border-color:#CC0000;}
-  .navcta{display:none;flex:none;}
+  .navcta{display:inline-flex;flex:none;}
   @media (min-width:1140px){.navcta{display:inline-flex;}}
   .burger{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--navy-deep);flex:none;}
   @media (max-width:1140px){
     nav.links{display:none;}
     .burger{display:block;}
+    .navcta{padding:9px 16px;font-size:.78rem;}
   }
+  @media (max-width:420px){
+    .nav{padding:12px 14px;gap:8px;}
+    .brand-text span{display:none;}
+    .brand-text{font-size:.85rem;}
+    .brand img{width:36px;height:36px;}
+    .navcta{padding:8px 12px;font-size:.72rem;}
+  }
+  nav.links.open a.active-link{
+    background:#c0392b;
+    color:#fff !important;
+    border:none !important;
+    border-radius:24px;
+    padding:10px 18px;
+    text-align:center;
+    font-weight:700;
+    font-family:'Cairo',sans-serif;
+  }
+  nav.links.open a.active-link:hover{background:#a5301f;}
   nav.links.open{
     display:flex; position:absolute; top:100%; left:0; right:0;
     flex-direction:column; background:var(--cream); padding:18px 24px 24px;
