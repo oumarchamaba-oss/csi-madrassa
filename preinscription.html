@@ -81,7 +81,7 @@
 
 <div class="top">
   <div class="wrap">
-    <span class="eyebrow">✍🏾 Préinscription en ligne</span>
+    <span class="eyebrow"><svg class="icn" viewBox="0 0 24 24" style="width:16px;height:16px;vertical-align:-3px;"><use href="#ic-note"/></svg> Préinscription en ligne</span>
     <h1>Préinscrire mon enfant</h1>
     <p>Remplissez ce formulaire simple. Notre administration vous contactera pour finaliser l'inscription.</p>
   </div>
@@ -91,7 +91,7 @@
   <div class="layout">
 
     <div class="card">
-      <div id="confirmMsg">✓ Votre demande a bien été envoyée. Notre administration vous contactera très prochainement.</div>
+      <div id="confirmMsg"><svg class="icn" viewBox="0 0 24 24" style="width:18px;height:18px;vertical-align:-4px;margin-right:4px;"><use href="#ic-check"/></svg>Votre demande a bien été envoyée. Notre administration vous contactera très prochainement.</div>
 
       <form id="preinsForm" action="https://api.web3forms.com/submit" method="POST">
         <!-- Remplacez la valeur ci-dessous par la clé d'accès reçue sur web3forms.com -->
@@ -173,7 +173,7 @@
     </div>
 
     <div class="card recap">
-      <h4>📋 Récapitulatif des frais</h4>
+      <h4><svg class="icn" viewBox="0 0 24 24" style="width:18px;height:18px;color:var(--green-deep);"><use href="#ic-note"/></svg> Récapitulatif des frais</h4>
       <div id="recapContent">
         <p class="recap-empty">Choisissez un programme pour voir les frais correspondants.</p>
       </div>
@@ -182,7 +182,7 @@
         <img src="assets/fondatrice.jpg" alt="Maman Zahra">
         <div>
           <div class="lbl">Une question avant d'envoyer ?</div>
-          <a href="https://wa.me/221785025050?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20la%20pr%C3%A9inscription." target="_blank" rel="noopener" style="color:var(--green-deep);font-size:.85rem;font-weight:700;">Écrire sur WhatsApp →</a>
+          <a href="https://wa.me/221785025050?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20la%20pr%C3%A9inscription." target="_blank" rel="noopener" style="color:var(--green-deep);font-size:.85rem;font-weight:700;display:inline-flex;align-items:center;gap:4px;">Écrire sur WhatsApp <svg class="icn" viewBox="0 0 24 24" style="width:14px;height:14px;"><use href="#ic-arrow-right"/></svg></a>
         </div>
       </div>
     </div>
@@ -244,7 +244,7 @@ document.getElementById('preinsForm').addEventListener('submit', async function(
     alert("Une erreur est survenue. Merci de réessayer ou de nous contacter directement sur WhatsApp.");
   }
 });
-</script>
+</script><svg style="display:none"><symbol id="ic-note" viewBox="0 0 24 24"><path d="M4 4h13l3 3v13H4Z"/><path d="M14 4v5h5"/><path d="M8 12h8M8 15.5h5"/></symbol><symbol id="ic-check" viewBox="0 0 24 24"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></symbol><symbol id="ic-arrow-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol></svg>
 
 </body>
 </html>
