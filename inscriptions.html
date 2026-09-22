@@ -151,6 +151,20 @@
     background-image:radial-gradient(circle at 20px 20px, var(--gold) 1.5px, transparent 1.6px);
     background-size:40px 40px;
   }
+  /* Twinkling star field — little stars glinting behind the banner content */
+  .star-field{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+  .star-field .tw-star{
+    position:absolute;color:var(--gold-light);opacity:.18;
+    filter:drop-shadow(0 0 3px rgba(227,210,184,.65));
+    animation:tw-twinkle var(--t,3.6s) ease-in-out var(--d,0s) infinite;
+  }
+  @keyframes tw-twinkle{
+    0%,100%{opacity:.1;transform:scale(.7);}
+    50%{opacity:1;transform:scale(1.25);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .star-field .tw-star{animation:none;opacity:.3;}
+  }
   .hero h1{font-size:clamp(2.1rem,4.6vw,3.15rem);color:#fff;line-height:1.14;margin:18px 0 20px;}
   .hero h1 em{font-style:normal;color:var(--gold-light);}
   .hero p.lead{color:#dbe3f4;font-size:1.05rem;max-width:50ch;margin-bottom:0;}
@@ -303,6 +317,30 @@
 </header>
 <section class="hero" id="top">
   <div class="hero-pattern"></div>
+  <div class="star-field" aria-hidden="true">
+    <svg class="tw-star" style="top:60.3%;left:4.4%;width:5.7px;height:5.7px;--d:0.94s;--t:4.22s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:63.5%;left:85.9%;width:4.5px;height:4.5px;--d:1.77s;--t:2.67s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:23.2%;left:49.5%;width:4.2px;height:4.2px;--d:0.84s;--t:4.03s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:52.0%;left:22.7%;width:7.5px;height:7.5px;--d:3.4s;--t:2.61s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:74.9%;left:67.6%;width:6.0px;height:6.0px;--d:0.65s;--t:4.71s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:33.6%;left:10.7%;width:4.6px;height:4.6px;--d:3.56s;--t:3.93s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:75.0%;left:70.6%;width:7.2px;height:7.2px;--d:4.09s;--t:3.43s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:52.6%;left:80.0%;width:7.7px;height:7.7px;--d:3.62s;--t:3.87s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:66.0%;left:6.3%;width:5.4px;height:5.4px;--d:1.22s;--t:2.78s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:24.5%;left:11.5%;width:5.7px;height:5.7px;--d:2.67s;--t:3.4s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:36.6%;left:21.7%;width:5.6px;height:5.6px;--d:3.93s;--t:4.03s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:57.6%;left:18.1%;width:8.4px;height:8.4px;--d:0.69s;--t:3.43s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:91.1%;left:62.2%;width:7.3px;height:7.3px;--d:2.88s;--t:4.45s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:72.3%;left:23.5%;width:4.2px;height:4.2px;--d:1.32s;--t:3.19s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:22.6%;left:90.6%;width:9.3px;height:9.3px;--d:1.32s;--t:4.04s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:38.8%;left:88.0%;width:6.8px;height:6.8px;--d:1.11s;--t:3.14s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:53.4%;left:26.7%;width:7.5px;height:7.5px;--d:3.77s;--t:3.48s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:23.3%;left:95.8%;width:7.1px;height:7.1px;--d:0.38s;--t:2.7s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:13.6%;left:61.0%;width:8.8px;height:8.8px;--d:1.77s;--t:2.74s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:37.6%;left:95.6%;width:7.2px;height:7.2px;--d:4.08s;--t:4.49s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:5.0%;left:69.7%;width:8.1px;height:8.1px;--d:2.26s;--t:3.19s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:60.4%;left:12.5%;width:6.6px;height:6.6px;--d:1.91s;--t:4.7s;"><use href="#ic-star"/></svg>
+  </div>
   <div class="wrap">
     <div>
       <span class="eyebrow">Inscriptions 2026/2027 &middot; Sangalkam, Dakar</span>
