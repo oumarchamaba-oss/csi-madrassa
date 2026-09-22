@@ -203,6 +203,67 @@
   .wa-float{position:fixed;bottom:22px;right:22px;z-index:80;display:flex;align-items:center;gap:10px;background:#fff;border-radius:50px;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.2);}
   .wa-float img{width:46px;height:46px;border-radius:50%;object-fit:cover;}
   .wa-float .wa-btn{background:#25D366;color:#fff;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+
+  /* ================= Arabesque Motion — animations & micro-interactions ================= */
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+  }
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  .reveal-stagger > *{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal-stagger.in > *{opacity:1;transform:none;}
+  .reveal-stagger.in > *:nth-child(1){transition-delay:.03s;}
+  .reveal-stagger.in > *:nth-child(2){transition-delay:.1s;}
+  .reveal-stagger.in > *:nth-child(3){transition-delay:.17s;}
+  .reveal-stagger.in > *:nth-child(4){transition-delay:.24s;}
+
+  /* Hero entrance */
+  .hero .wrap > div:first-child > .eyebrow{animation:fadeUp .7s ease both;}
+  .hero .wrap > div:first-child > h1{animation:fadeUp .8s ease .12s both;}
+  .hero .wrap > div:first-child > .langs{animation:fadeUp .8s ease .24s both;}
+  .hero .wrap > div:first-child > .lead{animation:fadeUp .8s ease .36s both;}
+  .hero-art{animation:fadeUp .9s ease .2s both;}
+
+  /* Arcade / dome divider between sections */
+  .arch-divider{
+    height:44px;background:var(--cream);
+    -webkit-mask-image:radial-gradient(circle at 22px 0, transparent 22px, #000 23px);
+    mask-image:radial-gradient(circle at 22px 0, transparent 22px, #000 23px);
+    -webkit-mask-size:44px 44px;mask-size:44px 44px;
+    -webkit-mask-repeat:repeat-x;mask-repeat:repeat-x;
+    -webkit-mask-position:top;mask-position:top;
+  }
+
+  /* Buttons — shimmer sweep + lift */
+  .btn,.abtn{position:relative;overflow:hidden;}
+  .btn::after,.abtn::after{
+    content:"";position:absolute;top:0;left:-60%;width:35%;height:100%;
+    background:linear-gradient(115deg,transparent,rgba(255,255,255,.55),transparent);
+    transform:skewX(-18deg);transition:left .65s cubic-bezier(.4,0,.2,1);pointer-events:none;
+  }
+  .btn:hover::after,.abtn:hover::after{left:130%;}
+  .abtn{transition:transform .2s ease, box-shadow .2s ease;}
+  .abtn:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(18,58,55,.35);}
+
+  /* Nav links — smooth underline fade instead of a hard snap */
+  nav.links a{transition:border-color .3s ease, color .3s ease;}
+
+  /* Card hover polish */
+  .choice-card{transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease;}
+  .choice-card:hover{transform:translateY(-8px);box-shadow:0 26px 44px -26px rgba(18,58,55,.35);}
+
+  .info-col{transition:transform .3s ease;}
+  .info-col:hover{transform:translateY(-4px);}
+
+  .contact-card{transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;}
+  .contact-card:hover{transform:translateY(-4px);box-shadow:0 18px 34px -18px rgba(18,58,55,.35);border-color:var(--gold);}
+
+  .wa-float{transition:transform .3s ease;}
+  .wa-float:hover{transform:translateY(-3px);}
 </style>
 </head>
 <body>
@@ -249,6 +310,8 @@
   </div>
 </section>
 
+<div class="arch-divider"></div>
+
 <section id="choix">
   <div class="wrap">
     <div class="section-head">
@@ -256,7 +319,7 @@
       <h2>Deux univers, une même exigence</h2>
       <p>Découvrez nos deux formules pédagogiques avant de commencer votre démarche d'inscription.</p>
     </div>
-    <div class="choice-grid">
+    <div class="choice-grid reveal-stagger">
 
       <div class="choice-card">
         <img src="assets/tile-salle-classe.jpg" alt="Salle de classe Madrassa Academy">
@@ -303,7 +366,7 @@
     </div>
 
     <div class="info-block">
-      <div class="info-grid">
+      <div class="info-grid reveal-stagger">
         <div class="info-col">
           <h4><svg class="icn" style="width:18px;height:18px;"><use href="#ic-cap"/></svg>Niveaux et frais — Madrassa Academy</h4>
           <div class="price-row"><span>Crèche — Inscription</span><span class="amount">70 000 F</span></div>
@@ -342,7 +405,7 @@
 
 <section id="preinscrire">
   <div class="wrap">
-    <div class="cta-band">
+    <div class="cta-band reveal">
       <span class="eyebrow" style="color:var(--gold-light);"><svg class="icn" style="width:16px;height:16px;"><use href="#ic-note"/></svg>Préinscription</span>
       <h3 style="margin-top:10px;">Vous avez trouvé la formule adaptée à votre enfant ?</h3>
       <p>Remplissez la fiche de préinscription en ligne. L'administration prendra ensuite contact avec vous pour la suite de la procédure.</p>
@@ -358,7 +421,7 @@
       <h2>Notre administration est à votre écoute</h2>
       <p>Disponible pour vous orienter et répondre à toutes vos questions.</p>
     </div>
-    <div class="contact-grid">
+    <div class="contact-grid reveal-stagger">
       <a class="contact-card" href="https://wa.me/221785025050?text=Bonjour%2C%20je%20souhaiterais%20avoir%20des%20renseignements%20sur%20l%27inscription." target="_blank" rel="noopener">
         <img src="assets/fondatrice.jpg" alt="Maman Zahra">
         <div><div class="lbl">Nous contacter sur WhatsApp</div><div class="sub">+221 78 502 50 50</div></div>
@@ -410,6 +473,11 @@
   const links = document.getElementById('navLinks');
   burger.addEventListener('click', () => links.classList.toggle('open'));
   links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, {threshold:.15});
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
 </script>
 
 </body>
