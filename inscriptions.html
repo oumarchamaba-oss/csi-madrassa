@@ -154,16 +154,16 @@
   /* Twinkling star field — little stars glinting behind the banner content */
   .star-field{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
   .star-field .tw-star{
-    position:absolute;color:var(--gold-light);opacity:.18;
-    filter:drop-shadow(0 0 3px rgba(227,210,184,.65));
+    position:absolute;color:#fff;opacity:.12;
+    filter:drop-shadow(0 0 2px rgba(255,255,255,.5));
     animation:tw-twinkle var(--t,3.6s) ease-in-out var(--d,0s) infinite;
   }
   @keyframes tw-twinkle{
-    0%,100%{opacity:.1;transform:scale(.7);}
-    50%{opacity:1;transform:scale(1.25);}
+    0%,100%{opacity:.06;transform:scale(.7);}
+    50%{opacity:.55;transform:scale(1.15);}
   }
   @media (prefers-reduced-motion: reduce){
-    .star-field .tw-star{animation:none;opacity:.3;}
+    .star-field .tw-star{animation:none;opacity:.18;}
   }
   .hero h1{font-size:clamp(2.1rem,4.6vw,3.15rem);color:#fff;line-height:1.14;margin:18px 0 20px;}
   .hero h1 em{font-style:normal;color:var(--gold-light);}
