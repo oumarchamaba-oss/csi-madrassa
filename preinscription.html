@@ -65,9 +65,42 @@
   .wa-mini img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid var(--green-deep);}
   .wa-mini .lbl{font-size:.82rem;font-weight:700;color:var(--navy-deep);}
 
-  #confirmMsg{display:none;background:#e8f5f0;border:1px solid var(--green-deep);color:var(--green-deep);padding:14px;border-radius:12px;font-weight:600;text-align:center;margin-bottom:16px;}
+  #confirmMsg{
+    background:#e8f5f0;border:1px solid var(--green-deep);color:var(--green-deep);border-radius:12px;font-weight:600;text-align:center;
+    max-height:0;opacity:0;padding:0 14px;margin-bottom:0;border-width:0;overflow:hidden;
+    transition:max-height .4s ease, opacity .35s ease, padding .4s ease, margin .4s ease, border-width .3s ease;
+  }
+  #confirmMsg.show{max-height:200px;opacity:1;padding:14px;margin-bottom:16px;border-width:1px;}
 
   footer{background:var(--navy-deep);color:#cfe3df;padding:24px 0;text-align:center;font-size:.82rem;}
+
+  /* ================= Arabesque Motion — animations & micro-interactions ================= */
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}
+  }
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  .card{animation:fadeUp .5s ease both;}
+  .card.recap{animation:fadeUp .5s ease .12s both;}
+
+  .field input, .field select, .field textarea{transition:border-color .25s ease, box-shadow .25s ease;}
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none;border-color:var(--green-deep);box-shadow:0 0 0 3px rgba(18,58,55,.12);
+  }
+
+  .radio-group label{transition:border-color .2s ease, background .2s ease;}
+  .radio-group label:hover{border-color:var(--green-deep);}
+  .radio-group label:has(input:checked){border-color:var(--green-deep);background:#e8f5f0;}
+
+  .btn.green{transition:background .2s ease, transform .15s ease, opacity .2s ease;}
+  .btn.green:hover:not(:disabled){background:var(--green);transform:translateY(-1px);}
+  .btn.green:disabled{opacity:.7;cursor:not-allowed;transform:none;}
+  .btn .spinner{display:inline-block;width:15px;height:15px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:-3px;margin-right:2px;}
+
+  .wa-mini{transition:transform .2s ease, box-shadow .2s ease;}
+  .wa-mini:hover{transform:translateY(-2px);box-shadow:0 10px 22px -14px rgba(18,58,55,.35);}
 </style>
 </head>
 <body>
@@ -228,12 +261,16 @@ document.getElementById('childLevel').addEventListener('change', updateRecap);
 document.getElementById('preinsForm').addEventListener('submit', async function(e){
   e.preventDefault();
   const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const originalBtnHtml = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Envoi en cours...';
   const data = new FormData(form);
   try{
     const res = await fetch(form.action, { method: 'POST', body: data, headers: {'Accept':'application/json'} });
     const json = await res.json();
     if(json.success){
-      document.getElementById('confirmMsg').style.display = 'block';
+      document.getElementById('confirmMsg').classList.add('show');
       form.reset();
       updateRecap();
       window.scrollTo({top:0, behavior:'smooth'});
@@ -242,6 +279,9 @@ document.getElementById('preinsForm').addEventListener('submit', async function(
     }
   } catch(err){
     alert("Une erreur est survenue. Merci de réessayer ou de nous contacter directement sur WhatsApp.");
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = originalBtnHtml;
   }
 });
 </script><svg style="display:none"><symbol id="ic-note" viewBox="0 0 24 24"><path d="M4 4h13l3 3v13H4Z"/><path d="M14 4v5h5"/><path d="M8 12h8M8 15.5h5"/></symbol><symbol id="ic-check" viewBox="0 0 24 24"><path d="M4.5 12.5 9.5 17.5 19.5 6.5"/></symbol><symbol id="ic-arrow-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol></svg>
