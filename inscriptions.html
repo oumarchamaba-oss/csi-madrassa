@@ -223,7 +223,15 @@
   .contact-card .lbl{font-weight:700;color:var(--navy-deep);font-size:.95rem;}
   .contact-card .sub{color:var(--ink-soft);font-size:.85rem;}
 
-  footer{background:var(--navy-deep);color:#cfe3df;padding:28px 0;text-align:center;font-size:.85rem;}
+  footer{background:#0a1636;color:#93a0c2;padding:40px 0 26px;}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center;}
+  .foot-brand{display:flex;align-items:center;gap:12px;}
+  .foot-brand img{width:36px;height:36px;}
+  .foot-brand span{font-family:'Cairo',sans-serif;color:#fff;font-weight:700;font-size:.92rem;}
+  footer .small{font-size:.78rem;margin-top:18px;color:#5f6d90;text-align:center;}
+  footer nav{display:flex;gap:20px;flex-wrap:wrap;}
+  footer nav a{font-size:.85rem;text-decoration:none;color:#c3cde3;}
+  footer nav a:hover{color:#fff;}
 
   /* WhatsApp floating bubble */
   .wa-float{position:fixed;bottom:22px;right:22px;z-index:80;display:flex;align-items:center;gap:10px;background:#fff;border-radius:50px;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.2);}
@@ -304,6 +312,7 @@
       <a href="/#apropos">A propos</a>
       <a href="/#programmes">Programmes</a>
       <a href="/#tarifs">Tarifs</a>
+      <a href="/fournitures">Fournitures</a>
       <a href="/inscriptions" class="active-link">Inscription</a>
       <a href="/#vacances">Vacances</a>
       <a href="/#galerie">Galerie</a>
@@ -490,7 +499,22 @@
 
 
 <footer>
-  <div class="wrap">Complexe Scolaire Islamique MADRASSA &mdash; Madrassa Academy &middot; Maison d'&Eacute;ducation Islamique Sokhna Bintou Abass</div>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo.png" alt="Logo CSI Madrassa">
+        <span>CSI Madrassa</span>
+      </div>
+      <nav>
+        <a href="/#apropos">A propos</a>
+        <a href="/#tarifs">Tarifs</a>
+        <a href="/fournitures">Fournitures</a>
+        <a href="/#galerie">Galerie</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="small">&copy; 2026 CSI Madrassa &mdash; Madrassa Academy &middot; Maison d'&Eacute;ducation Islamique Sokhna Bintou Abass. Sangalkam, Dakar, S&eacute;n&eacute;gal.</div>
+  </div>
 </footer>
 
 <a class="wa-float" href="https://wa.me/221785025050?text=Bonjour%2C%20je%20souhaiterais%20avoir%20des%20renseignements." target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">

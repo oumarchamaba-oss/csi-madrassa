@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fournitures scolaires 2026/2027 — CSI Madrassa | Sangalkam, Dakar</title>
+<meta name="description" content="Liste officielle des fournitures et manuels scolaires CSI Madrassa pour chaque classe, de la Petite Section au CM2 — année scolaire 2026/2027.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.csi-madrassa.com/fournitures">
+<meta property="og:title" content="Fournitures scolaires 2026/2027 — CSI Madrassa">
+<meta property="og:description" content="Liste officielle des fournitures et manuels scolaires CSI Madrassa pour chaque classe, de la Petite Section au CM2.">
+<meta property="og:image" content="https://www.csi-madrassa.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fournitures scolaires 2026/2027 — CSI Madrassa">
+<meta name="twitter:description" content="Liste officielle des fournitures et manuels scolaires CSI Madrassa pour chaque classe, de la Petite Section au CM2.">
+<meta name="twitter:image" content="https://www.csi-madrassa.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-deep:#0c5f4f;
+    --green:#12816a;
+    --green-bright:#1ea082;
+    --navy:#1c5551;
+    --navy-deep:#123a37;
+    --gold:#ceb286;
+    --gold-light:#e3d2b8;
+    --lime:#87bb29;
+    --cream:#faf6ec;
+    --cream-warm:#f3ecdb;
+    --ink:#152026;
+    --ink-soft:#4b5560;
+    --line:#e3dcc9;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Work Sans', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+  }
+  h1,h2,h3,h4,.display{
+    font-family:'Cairo', sans-serif;
+    font-weight:700;
+    color:var(--navy-deep);
+    margin:0;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    font-family:'Cairo',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:.72rem;
+    font-weight:600;
+    color:var(--green-deep);
+    display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;height:2px;
+    background:var(--gold);
+    display:inline-block;
+  }
+  section{padding:88px 0;}
+  @media (max-width:700px){ section{padding:56px 0;} }
+
+  .icn{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:block;}
+
+  .arch-divider{
+    height:44px;background:var(--cream);
+    -webkit-mask-image:radial-gradient(circle at 22px 0, transparent 22px, #000 23px);
+    mask-image:radial-gradient(circle at 22px 0, transparent 22px, #000 23px);
+    -webkit-mask-size:44px 44px;mask-size:44px 44px;
+    -webkit-mask-repeat:repeat-x;mask-repeat:repeat-x;
+    -webkit-mask-position:top;mask-position:top;
+  }
+
+  /* ---------- Header / Nav (identique au reste du site) ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(250,246,236,.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;
+    max-width:1320px;margin:0 auto;
+    position:relative;
+    gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none;}
+  .brand img{width:44px;height:44px;object-fit:contain;}
+  .brand-text{font-family:'Cairo',sans-serif;font-weight:700;color:var(--navy-deep);line-height:1.1;font-size:.98rem;white-space:nowrap;}
+  .brand-text span{display:block;font-size:.62rem;font-weight:500;color:var(--green-deep);letter-spacing:.06em;text-transform:uppercase;}
+  nav.links{display:flex;gap:15px;align-items:center;flex:1;justify-content:center;}
+  nav.links a{
+    font-size:.8rem;font-weight:500;text-decoration:none;color:var(--ink);
+    padding:6px 1px;border-bottom:2px solid transparent;white-space:nowrap;
+    transition:border-color .3s ease, color .3s ease;
+  }
+  nav.links a:hover{border-color:var(--gold);}
+  .active-link{border-color:var(--gold) !important;}
+  .btn{
+    position:relative;overflow:hidden;
+    font-family:'Cairo',sans-serif;
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--green-deep);color:#fff;
+    padding:11px 22px;border-radius:30px;
+    text-decoration:none;font-weight:600;font-size:.86rem;
+    border:1px solid var(--green-deep);
+    transition:transform .15s ease, background .15s ease;
+    white-space:nowrap;cursor:pointer;
+  }
+  .btn::after{
+    content:"";position:absolute;top:0;left:-60%;width:35%;height:100%;
+    background:linear-gradient(115deg,transparent,rgba(255,255,255,.55),transparent);
+    transform:skewX(-18deg);transition:left .65s cubic-bezier(.4,0,.2,1);pointer-events:none;
+  }
+  .btn:hover::after{left:130%;}
+  .btn:hover{background:var(--green-bright);transform:translateY(-1px);}
+  .btn.outline{background:transparent;color:var(--navy-deep);border-color:var(--navy-deep);}
+  .btn.outline:hover{background:var(--navy-deep);color:#fff;}
+  .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--navy-deep);}
+  .btn.gold:hover{background:var(--gold-light);}
+  .navcta{display:inline-flex;flex:none;}
+  @media (min-width:1140px){.navcta{display:inline-flex;}}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--navy-deep);flex:none;}
+  @media (max-width:1140px){
+    nav.links{display:none;}
+    .burger{display:block;}
+    .navcta{padding:9px 16px;font-size:.78rem;}
+  }
+  @media (max-width:420px){
+    .nav{padding:12px 14px;gap:8px;}
+    .brand-text span{display:none;}
+    .brand-text{font-size:.85rem;}
+    .brand img{width:36px;height:36px;}
+    .navcta{padding:8px 12px;font-size:.72rem;}
+  }
+  nav.links.open a.active-link{
+    background:#c0392b;color:#fff !important;border:none !important;border-radius:24px;
+    padding:10px 18px;text-align:center;font-weight:700;font-family:'Cairo',sans-serif;
+  }
+  nav.links.open a.active-link:hover{background:#a5301f;}
+  nav.links.open{
+    display:flex; position:absolute; top:100%; left:0; right:0;
+    flex-direction:column; background:var(--cream); padding:18px 24px 24px;
+    border-bottom:1px solid var(--line); gap:16px;
+  }
+
+  /* ---------- Hero (sous-page, une colonne) ---------- */
+  .hero{
+    position:relative;
+    background:radial-gradient(1200px 700px at 15% -10%, #163a72 0%, var(--navy-deep) 55%, #0a1636 100%);
+    color:#fff;
+    padding:74px 0 60px;
+    overflow:hidden;
+  }
+  .hero .wrap{max-width:760px;position:relative;}
+  .star-field{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+  .star-field .tw-star{
+    position:absolute;color:#fff;opacity:.12;
+    filter:drop-shadow(0 0 2px rgba(255,255,255,.5));
+    animation:tw-twinkle var(--t,3.6s) ease-in-out var(--d,0s) infinite;
+  }
+  @keyframes tw-twinkle{0%,100%{opacity:.06;transform:scale(.7);}50%{opacity:.55;transform:scale(1.15);}}
+  .hero-pattern{
+    position:absolute;inset:0;pointer-events:none;opacity:.14;
+    background-image:radial-gradient(circle at 20px 20px, var(--gold) 1.5px, transparent 1.6px);
+    background-size:40px 40px;
+  }
+  .hero h1{font-size:clamp(2rem,4.4vw,2.9rem);color:#fff;line-height:1.14;margin:18px 0 20px;}
+  .hero h1 em{font-style:normal;color:var(--gold-light);}
+  .hero p.lead{color:#dbe3f4;font-size:1.05rem;max-width:56ch;margin-bottom:0;}
+  @media (prefers-reduced-motion: reduce){.star-field .tw-star{animation:none;opacity:.18;}}
+
+  /* ---------- Section heads ---------- */
+  .section-head{max-width:680px;margin-bottom:36px;}
+  .section-head h2{font-size:clamp(1.5rem,2.8vw,2rem);margin-top:10px;}
+  .section-head p{color:var(--ink-soft);margin-top:12px;}
+
+  /* ---------- Sélecteur de classes ---------- */
+  .cycle-group{margin-bottom:36px;}
+  .cycle-label{
+    font-family:'Cairo',sans-serif;font-size:.78rem;font-weight:700;
+    color:var(--green-deep);text-transform:uppercase;letter-spacing:.06em;
+    margin:18px 0 10px;
+  }
+  .cycle-label:first-child{margin-top:0;}
+  .class-tabs{display:flex;flex-wrap:wrap;gap:10px;}
+  .class-tab{
+    font-family:'Cairo',sans-serif;font-weight:600;font-size:.85rem;
+    border:1.5px solid var(--line);background:#fff;color:var(--navy-deep);
+    padding:10px 20px;border-radius:30px;cursor:pointer;
+    transition:background .2s ease,border-color .2s ease,color .2s ease,transform .2s ease;
+  }
+  .class-tab:hover{border-color:var(--gold);transform:translateY(-1px);}
+  .class-tab.active{background:var(--green-deep);border-color:var(--green-deep);color:#fff;}
+
+  /* ---------- Panneau de fournitures ---------- */
+  .supply-panel{
+    background:#fff;border:1px solid var(--line);border-radius:28px 28px 12px 12px;
+    padding:36px 34px;box-shadow:0 22px 44px -30px rgba(13,28,70,.35);
+  }
+  @media (max-width:640px){.supply-panel{padding:26px 20px;}}
+  .supply-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-bottom:28px;padding-bottom:22px;border-bottom:1px dashed var(--line);}
+  .supply-head h3{font-size:1.4rem;}
+  .supply-head .sub{font-family:'Cairo',sans-serif;color:var(--green-deep);font-size:.82rem;font-weight:600;margin-top:4px;}
+  .print-actions{display:flex;gap:10px;flex-wrap:wrap;}
+  .print-note{font-size:.76rem;color:var(--ink-soft);margin-top:8px;max-width:260px;}
+  .supply-cats{display:grid;grid-template-columns:1fr 1fr;gap:28px 36px;}
+  @media (max-width:760px){.supply-cats{grid-template-columns:1fr;}}
+  .supply-cat h4{
+    display:flex;align-items:center;gap:10px;font-size:.98rem;margin-bottom:12px;
+  }
+  .supply-cat .icon{
+    width:34px;height:34px;flex:none;border-radius:50% 50% 6px 6px;
+    background:var(--cream-warm);border:1.5px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;color:var(--green-deep);
+  }
+  .supply-cat .icon .icn{width:17px;height:17px;}
+  .supply-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
+  .supply-list li{
+    display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--ink-soft);
+    padding-bottom:8px;border-bottom:1px solid var(--line);
+  }
+  .supply-list li:last-child{border-bottom:none;padding-bottom:0;}
+  .supply-list li .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none;margin-top:7px;}
+  .supply-note{
+    display:flex;align-items:flex-start;gap:10px;
+    font-size:.82rem;color:#8a6c2e;background:#fbf1dc;border:1px dashed var(--gold);
+    padding:14px 16px;border-radius:12px;margin-top:28px;
+  }
+  .supply-note .icn{width:17px;height:17px;flex:none;margin-top:1px;color:#8a6c2e;}
+  .print-letterhead{display:none;}
+
+  /* ---------- Aide / WhatsApp ---------- */
+  .contact{background:var(--navy-deep);color:#fff;}
+  .contact .eyebrow{color:var(--gold-light);}
+  .contact .eyebrow::before{background:var(--gold-light);}
+  .contact .section-head h2{color:#fff;}
+  .contact .section-head p{color:#c3cde3;}
+  .founder-whatsapp{transition:transform .3s ease, box-shadow .3s ease;}
+  .founder-whatsapp:hover{transform:translateY(-3px);box-shadow:0 14px 28px -14px rgba(18,58,55,.4);}
+
+  /* ---------- Footer (identique au reste du site) ---------- */
+  footer{background:#0a1636;color:#93a0c2;padding:40px 0 26px;}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center;}
+  .foot-brand{display:flex;align-items:center;gap:12px;}
+  .foot-brand img{width:36px;height:36px;}
+  .foot-brand span{font-family:'Cairo',sans-serif;color:#fff;font-weight:700;font-size:.92rem;}
+  footer .small{font-size:.78rem;margin-top:18px;color:#5f6d90;text-align:center;}
+  footer nav{display:flex;gap:20px;flex-wrap:wrap;}
+  footer nav a{font-size:.85rem;text-decoration:none;color:#c3cde3;}
+  footer nav a:hover{color:#fff;}
+
+  /* ---------- Impression ---------- */
+  @media print{
+    header,footer,.hero,.arch-divider,.section-head,.cycle-group,#fournitures-aide,.print-actions,.print-note{display:none !important;}
+    body{background:#fff;}
+    section{padding:0;}
+    .wrap{max-width:100%;padding:0;}
+    .supply-panel{border:none;box-shadow:none;border-radius:0;padding:0;}
+    .print-letterhead{display:block !important;margin-bottom:22px;}
+    .print-letterhead .lh-title{font-family:'Cairo',sans-serif;font-weight:800;font-size:1.2rem;color:var(--navy-deep);}
+    .print-letterhead .lh-sub{font-size:.85rem;color:var(--ink-soft);margin-top:4px;}
+    #printAllArea{display:block !important;}
+    #printAllArea .supply-panel{page-break-after:always;margin-bottom:0;}
+    #printAllArea .supply-panel:last-child{page-break-after:auto;}
+    body:not(.printing-all) #printAllArea{display:none !important;}
+    body.printing-all #supplyPanel{display:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="/" class="brand">
+      <img src="assets/logo.png" alt="Logo CSI Madrassa">
+      <span class="brand-text">CSI Madrassa<span>Savoir &amp; Foi</span></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="/#apropos">A propos</a>
+      <a href="/#programmes">Programmes</a>
+      <a href="/#tarifs">Tarifs</a>
+      <a href="/fournitures" class="active-link">Fournitures</a>
+      <a href="/inscriptions">Inscription</a>
+      <a href="/#vacances">Vacances</a>
+      <a href="/#galerie">Galerie</a>
+      <a href="/#fondatrice">Fondatrice</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <a href="/inscriptions" class="btn navcta" style="background:#c0392b;border-color:#c0392b;color:#fff;">Inscriptions</a>
+    <button class="burger" id="burgerBtn" aria-label="Menu"><svg class="icn" viewBox="0 0 24 24" style="width:24px;height:24px;stroke-width:1.8;"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-pattern"></div>
+  <div class="star-field" aria-hidden="true">
+    <svg class="tw-star" style="top:60.3%;left:4.4%;width:5.7px;height:5.7px;--d:0.94s;--t:4.22s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:23.2%;left:49.5%;width:4.2px;height:4.2px;--d:0.84s;--t:4.03s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:52.0%;left:22.7%;width:7.5px;height:7.5px;--d:3.4s;--t:2.61s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:74.9%;left:67.6%;width:6.0px;height:6.0px;--d:0.65s;--t:4.71s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:33.6%;left:10.7%;width:4.6px;height:4.6px;--d:3.56s;--t:3.93s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:13.6%;left:61.0%;width:8.8px;height:8.8px;--d:1.77s;--t:2.74s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:5.0%;left:69.7%;width:8.1px;height:8.1px;--d:2.26s;--t:3.19s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:60.4%;left:12.5%;width:6.6px;height:6.6px;--d:1.91s;--t:4.7s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:22.6%;left:90.6%;width:9.3px;height:9.3px;--d:1.32s;--t:4.04s;"><use href="#ic-star"/></svg>
+    <svg class="tw-star" style="top:38.8%;left:88.0%;width:6.8px;height:6.8px;--d:1.11s;--t:3.14s;"><use href="#ic-star"/></svg>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow">Année scolaire 2026/2027</span>
+    <h1>Fournitures <em>scolaires</em></h1>
+    <p class="lead">Retrouvez ici la liste officielle des manuels et fournitures pour chaque classe, de la Petite Section au CM2. Choisissez la classe de votre enfant, puis imprimez ou téléchargez la liste en PDF.</p>
+  </div>
+</section>
+
+<div class="arch-divider"></div>
+
+<section id="fournitures-select">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Choisir une classe</span>
+      <h2>Sélectionnez la classe de votre enfant</h2>
+      <p>Les listes sont organisées par cycle. Toutes les fournitures doivent être soigneusement marquées au nom de l'élève.</p>
+    </div>
+
+    <div class="cycle-group">
+      <div class="cycle-label">Cycle Maternelle</div>
+      <div class="class-tabs" id="tabsMaternelle"></div>
+      <div class="cycle-label">Cycle Élémentaire</div>
+      <div class="class-tabs" id="tabsElementaire"></div>
+    </div>
+
+    <div id="supplyPanel"></div>
+    <div id="printAllArea" hidden></div>
+  </div>
+</section>
+
+<section id="fournitures-aide" class="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Une question ?</span>
+      <h2>Besoin d'aide pour une liste de fournitures ?</h2>
+      <p>Notre administration reste disponible pour toute précision sur le matériel demandé.</p>
+    </div>
+    <a href="https://wa.me/221785025050?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20la%20liste%20de%20fournitures%20scolaires." target="_blank" rel="noopener" class="founder-whatsapp" style="display:inline-flex;align-items:center;gap:12px;padding:14px 20px;background:#e8f5f0;border-radius:14px;text-decoration:none;max-width:420px;">
+      <svg class="icn" viewBox="0 0 24 24" style="width:22px;height:22px;color:var(--green-deep);flex:none;"><use href="#ic-chat"/></svg>
+      <span style="color:var(--navy-deep);font-weight:600;">Discuter avec notre administration sur WhatsApp</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo.png" alt="Logo CSI Madrassa">
+        <span>CSI Madrassa</span>
+      </div>
+      <nav>
+        <a href="/#apropos">A propos</a>
+        <a href="/#tarifs">Tarifs</a>
+        <a href="/fournitures">Fournitures</a>
+        <a href="/#galerie">Galerie</a>
+        <a href="/#fondatrice">Fondatrice</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="small">© 2026 CSI Madrassa — L'Excellence Éducative alliant Savoir et Foi. Sangalkam, Dakar, Sénégal.</div>
+  </div>
+</footer>
+
+<svg style="display:none">
+  <symbol id="ic-star" viewBox="0 0 24 24"><path d="M12 2 13.8 8.2 20 6.5l-3.8 5.1L20 17.5l-6.2-1.7L12 22l-1.8-6.2L4 17.5l3.8-5.9L4 6.5l6.2 1.7Z"/></symbol>
+  <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 1 3.5 6.6L4 20l1.4-3.6A8 8 0 0 1 4 12Z"/><path d="M8.5 11h7M8.5 14h4.5"/></symbol>
+  <symbol id="ic-book" viewBox="0 0 24 24"><path d="M12 6c-2-1.5-5-2-8-1.5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-13c-3-.5-6 0-8 1.5Z"/><path d="M12 6v13"/></symbol>
+  <symbol id="ic-note" viewBox="0 0 24 24"><path d="M4 4h13l3 3v13H4Z"/><path d="M14 4v5h5"/><path d="M8 12h8M8 15.5h5"/></symbol>
+  <symbol id="ic-pencil" viewBox="0 0 24 24"><path d="M4 20l1-5L15.5 4.5a2 2 0 0 1 3 0l1 1a2 2 0 0 1 0 3L9 19l-5 1Z"/><path d="M13 6.5l4 4"/></symbol>
+  <symbol id="ic-ruler" viewBox="0 0 24 24"><path d="M4 15 15 4l5 5L9 20Z"/><path d="M11 8l2 2M8 11l2 2M15 5l2 2"/></symbol>
+  <symbol id="ic-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.3 0 1.9-.8 1.9-1.8 0-.5-.2-.9-.5-1.3-.3-.4-.5-.8-.5-1.3 0-.9.7-1.6 1.6-1.6h1.9a4.1 4.1 0 0 0 4.1-4.1C20.5 6.3 16.7 3 12 3Z"/><circle cx="7.5" cy="12" r="1.1" fill="currentColor" stroke="none"/><circle cx="9" cy="8" r="1.1" fill="currentColor" stroke="none"/><circle cx="14" cy="7.5" r="1.1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="ic-print" viewBox="0 0 24 24"><path d="M6 9V3h12v6"/><rect x="4" y="9" width="16" height="7" rx="1.5"/><path d="M6 16v5h12v-5"/></symbol>
+</svg>
+
+<script>
+  const burger = document.getElementById('burgerBtn');
+  const links = document.getElementById('navLinks');
+  burger.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  // ---------- Données : fournitures par classe (année 2026/2027) ----------
+  const NOTE_MARQUAGE = "Toutes les fournitures doivent être soigneusement marquées au nom de l'élève.";
+  const NOTE_MATERNELLE = "Merci aux parents de prévoir tout le matériel indiqué afin de permettre aux enfants de travailler dans de bonnes conditions.";
+
+  const CAT_MATERNELLE = [
+    {name:"Livres et cahiers", icon:"book", items:[
+      "Cahier d'activités Graphisme et Lecture – Kotti Kotii / Yolli Yolli",
+      "1 cahier d'activités : Logico-mathématiques, Perceptivo-motricité et Initiation scientifique",
+      "2 livres d'Éducation islamique",
+      "1 cahier de dessin",
+      "2 cahiers à double ligne",
+      "1 cahier de liaison",
+      "2 lutins de 50 pages"
+    ]},
+    {name:"Matériel scolaire", icon:"pencil", items:[
+      "1 cartable","1 chemise cartonnée grand modèle","1 colle blanche","1 ardoise","1 boîte de craie","1 crayon noir","1 gomme"
+    ]},
+    {name:"Matériel d'arts plastiques", icon:"palette", items:[
+      "Des pinceaux","Des pots de peinture","4 paquets de papier Canson couleur et blanc","1 paquet de crayons de couleur","1 paquet de feutres","De la pâte à modeler"
+    ]},
+    {name:"Papier", icon:"note", items:["2 rames de papier"]}
+  ];
+
+  const DATA = {
+    ps: {label:"Petite Section", cycle:"Cycle Maternelle", categories:CAT_MATERNELLE, note:NOTE_MATERNELLE},
+    ms: {label:"Moyenne Section", cycle:"Cycle Maternelle", categories:CAT_MATERNELLE, note:NOTE_MATERNELLE},
+    gs: {label:"Grande Section", cycle:"Cycle Maternelle", categories:CAT_MATERNELLE, note:NOTE_MATERNELLE},
+
+    ci: {label:"CI", cycle:"Cycle Élémentaire", note:NOTE_MARQUAGE, categories:[
+      {name:"Cahiers", icon:"note", items:["3 cahiers double lignes","10 cahiers de 50 pages","2 cahiers de dessin"]},
+      {name:"Livres", icon:"book", items:[
+        "Langue et Communication — Cours et outil — Collection Didaktikos",
+        "Mathématiques — Cours et outil",
+        "Découverte du Monde — Cours",
+        "Développement Durable — Cours",
+        "Livre de lecture Ami et Rémi — CI",
+        "Livre de graphisme Koti Koti — CI",
+        "1 livre English for Kids",
+        "2 lutins"
+      ]},
+      {name:"Matériel", icon:"pencil", items:[
+        "2 trousses","2 ardoises","2 protège-cahiers (vert, jaune, rouge et orange)","1 rame de papier","1 boîte de craie",
+        "1 couverture de livre adhésive","1 boîte de crayons de couleur","1 pot de colle blanche","1 paquet de 50 bâtonnets",
+        "2 éponges","1 règle","1 gomme"
+      ]},
+      {name:"Écriture", icon:"pencil", items:["3 stylos bleus","3 stylos rouges","3 stylos verts","3 crayons noirs"]}
+    ]},
+
+    cp: {label:"CP", cycle:"Cycle Élémentaire", note:"Tous les livres sont de la collection Didaktikos.", categories:[
+      {name:"Livres — Collection Didaktikos", icon:"book", items:[
+        "Mathématiques (1 manuel + 1 outil)",
+        "Lecture (1 livre Ami et Rémi)",
+        "Langue et Communication (1 manuel + 1 outil)",
+        "Découverte du Monde (1 manuel)",
+        "Éducation au Développement Durable (1 manuel)",
+        "Anglais : 1 livre English for Kids CP"
+      ]},
+      {name:"Fournitures", icon:"pencil", items:[
+        "1 rame de papier","2 lutins","1 cahier double ligne","1 cahier de dessin","2 trousses","6 bics bleus","3 bics verts",
+        "6 crayons noirs","1 paquet de crayons de couleur","1 taille-crayon","1 gomme","13 cahiers de 50 pages",
+        "2 cahiers de 100 pages","1 méthode d'écriture n°2","1 rouleau de couvre-livres","2 ardoises","1 boîte de craie"
+      ]}
+    ]},
+
+    ce1: {label:"CE1", cycle:"Cycle Élémentaire", note:NOTE_MARQUAGE, categories:[
+      {name:"Livres", icon:"book", items:[
+        "Langue et Communication CE1 — Collection Didaktikos",
+        "Mathématique CE1 — Collection Didaktikos",
+        "Découverte du Monde CE1 — Collection Didaktikos",
+        "Éducation au Développement Durable CE1 — Collection Didaktikos",
+        "Ami et Rémi CE1 — Lecture",
+        "Ami et Rémi CE1 — Grammaire",
+        "Dictionnaire français Larousse ou Robert",
+        "Calcul quotidien CE — Collection Bodard Lagoutte",
+        "1 livre English for Kids CE1"
+      ]},
+      {name:"Fournitures", icon:"pencil", items:[
+        "1 rame de papier A4","17 cahiers de 100 pages avec protège-cahier intégré","1 cahier Méthode d'écriture n°3",
+        "1 cahier de dessin grand format","2 cahiers de 100 pages","1 lutin 40 pages",
+        "2 paquets de couvertures + étiquettes pour identifier l'élève","1 bouteille de colle blanche grand modèle"
+      ]},
+      {name:"Matériel de géométrie", icon:"ruler", items:["2 doubles décimètres en fer","2 équerres en fer","2 rapporteurs en fer","2 compas en fer"]},
+      {name:"Écriture et coloriage", icon:"pencil", items:[
+        "1 boîte de crayons de couleurs (12)","3 crayons noirs HB","1 gomme blanche","4 stylos à bille bleus",
+        "2 stylos à bille verts","2 stylos à bille rouges","1 trousseau grand modèle"
+      ]}
+    ]},
+
+    ce2: {label:"CE2", cycle:"Cycle Élémentaire", note:NOTE_MARQUAGE, categories:[
+      {name:"Livres", icon:"book", items:[
+        "Langue et Communication CE2 — Collection Didaktikos",
+        "Mathématique CE2 — Collection Didaktikos",
+        "Découverte du Monde CE2 — Collection Didaktikos",
+        "Éducation au Développement Durable CE2 — Collection Didaktikos",
+        "Ami et Rémi CE2 — Lecture",
+        "Ami et Rémi CE2 — Grammaire",
+        "Dictionnaire français Larousse ou Robert",
+        "Calcul quotidien CE2 — Collection Bodard Lagoutte",
+        "2 livres English for Kids CE2"
+      ]},
+      {name:"Fournitures", icon:"pencil", items:[
+        "1 rame de papier A4","19 cahiers de 100 pages avec protège-cahier intégré","1 cahier Méthode d'écriture n°3",
+        "1 cahier de dessin grand format","2 paquets de couvertures + étiquettes pour identifier l'élève",
+        "1 bouteille de colle blanche grand modèle"
+      ]},
+      {name:"Matériel de géométrie", icon:"ruler", items:["2 doubles décimètres en fer","2 équerres en fer","2 rapporteurs en fer","2 compas en fer"]},
+      {name:"Écriture et coloriage", icon:"pencil", items:[
+        "1 boîte de crayons de couleurs (12)","3 crayons noirs HB","1 gomme blanche","4 stylos à bille bleus",
+        "2 stylos à bille verts","2 stylos à bille rouges","1 trousseau grand modèle"
+      ]}
+    ]},
+
+    cm1: {label:"CM1", cycle:"Cycle Élémentaire", note:NOTE_MARQUAGE, categories:[
+      {name:"Manuels scolaires", icon:"book", items:[
+        "1 manuel de Langue et Communication – Cours","1 manuel de Langue et Communication – Outil Didaktikos",
+        "1 manuel de Mathématiques – Cours","1 manuel de Mathématiques – Outil Didaktikos",
+        "1 manuel de Découverte du Monde – Cours","1 manuel de Découverte du Monde – Outil Didaktikos",
+        "1 manuel de Développement Durable – Cours","1 manuel de Développement Durable – Outil Didaktikos",
+        "1 livre English for Kids","2 livres Lutins"
+      ]},
+      {name:"Cahiers", icon:"note", items:["11 cahiers de 100 pages","5 cahiers de 200 pages"]},
+      {name:"Matériel d'écriture", icon:"pencil", items:["3 stylos bleus","3 stylos verts","3 stylos rouges","2 trousses","2 ardoises","1 boîte de craie"]},
+      {name:"Matériel de géométrie", icon:"ruler", items:["1 matériel de géométrie complet"]},
+      {name:"Fournitures diverses", icon:"note", items:["1 rame de papier","2 protège-cahiers (vert, jaune, bleu, rouge, marron et orange)"]}
+    ]},
+
+    cm2: {label:"CM2", cycle:"Cycle Élémentaire", note:NOTE_MARQUAGE, categories:[
+      {name:"Manuels scolaires", icon:"book", items:[
+        "1 manuel de Langue et Communication – Cours","1 manuel de Langue et Communication – Outil Didaktikos",
+        "1 manuel de Mathématiques – Cours","1 manuel de Mathématiques – Outil Didaktikos",
+        "1 manuel de Découverte du Monde – Cours","1 manuel de Découverte du Monde – Outil Didaktikos",
+        "1 manuel de Développement Durable – Cours","1 manuel de Développement Durable – Outil Didaktikos",
+        "1 livre English for Kids","2 livres Lutins"
+      ]},
+      {name:"Cahiers", icon:"note", items:["11 cahiers de 100 pages","5 cahiers de 200 pages"]},
+      {name:"Matériel d'écriture", icon:"pencil", items:["3 stylos bleus","3 stylos verts","3 stylos rouges","2 trousses","2 ardoises","1 boîte de craie"]},
+      {name:"Matériel de géométrie", icon:"ruler", items:["1 matériel de géométrie complet"]},
+      {name:"Fournitures diverses", icon:"note", items:["1 rame de papier","2 protège-cahiers (vert, jaune, bleu, rouge, marron et orange)"]}
+    ]}
+  };
+
+  const ORDER_MATERNELLE = ["ps","ms","gs"];
+  const ORDER_ELEMENTAIRE = ["ci","cp","ce1","ce2","cm1","cm2"];
+
+  function buildTabs(containerId, keys){
+    const el = document.getElementById(containerId);
+    el.innerHTML = keys.map(k => `<button class="class-tab" data-class="${k}">${DATA[k].label}</button>`).join('');
+  }
+  buildTabs('tabsMaternelle', ORDER_MATERNELLE);
+  buildTabs('tabsElementaire', ORDER_ELEMENTAIRE);
+
+  function renderPanelHTML(key, forPrint){
+    const d = DATA[key];
+    const letterhead = forPrint ? `<div class="print-letterhead"><div class="lh-title">CSI Madrassa — Liste des fournitures</div><div class="lh-sub">${d.label} · Année scolaire 2026/2027</div></div>` : '';
+    const actions = forPrint ? '' : `
+      <div class="print-actions">
+        <button class="btn outline" onclick="printClass('${key}')"><svg class="icn" viewBox="0 0 24 24" style="width:16px;height:16px;"><use href="#ic-print"/></svg>Imprimer / PDF</button>
+        <button class="btn gold" onclick="printAll()">Tout imprimer (9 classes)</button>
+      </div>
+      <p class="print-note">Dans la fenêtre d'impression, choisissez « Enregistrer au format PDF » pour télécharger la liste.</p>`;
+    const cats = d.categories.map(c => `
+      <div class="supply-cat">
+        <h4><span class="icon"><svg class="icn" viewBox="0 0 24 24"><use href="#ic-${c.icon}"/></svg></span>${c.name}</h4>
+        <ul class="supply-list">${c.items.map(i => `<li><span class="dot"></span>${i}</li>`).join('')}</ul>
+      </div>`).join('');
+    return `
+      ${letterhead}
+      <div class="supply-head">
+        <div>
+          <h3>${d.label}</h3>
+          <div class="sub">${d.cycle} · Année scolaire 2026/2027</div>
+        </div>
+        ${actions}
+      </div>
+      <div class="supply-cats">${cats}</div>
+      <div class="supply-note"><svg class="icn" viewBox="0 0 24 24"><use href="#ic-note"/></svg>${d.note}</div>
+    `;
+  }
+
+  function renderClass(key){
+    document.getElementById('supplyPanel').innerHTML = `<div class="supply-panel">${renderPanelHTML(key,false)}</div>`;
+    document.querySelectorAll('.class-tab').forEach(btn => btn.classList.toggle('active', btn.dataset.class === key));
+  }
+
+  document.querySelectorAll('.class-tabs').forEach(group => {
+    group.addEventListener('click', e => {
+      const btn = e.target.closest('.class-tab');
+      if (!btn) return;
+      renderClass(btn.dataset.class);
+      document.getElementById('supplyPanel').scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  function printClass(key){
+    renderClass(key);
+    document.body.classList.remove('printing-all');
+    setTimeout(() => window.print(), 50);
+  }
+
+  function printAll(){
+    const allKeys = [...ORDER_MATERNELLE, ...ORDER_ELEMENTAIRE];
+    document.getElementById('printAllArea').innerHTML = allKeys.map(k => `<div class="supply-panel">${renderPanelHTML(k,true)}</div>`).join('');
+    document.body.classList.add('printing-all');
+    setTimeout(() => window.print(), 50);
+  }
+  window.printClass = printClass;
+  window.printAll = printAll;
+  window.addEventListener('afterprint', () => document.body.classList.remove('printing-all'));
+
+  // Classe par défaut à l'ouverture de la page
+  renderClass('ps');
+</script>
+
+</body>
+</html>
